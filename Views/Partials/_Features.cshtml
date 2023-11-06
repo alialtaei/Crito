@@ -1,0 +1,38 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models
+
+<section class="features">
+    <div class="container">
+      <div class="features-info">
+        <h5 class="features-text">@Model.Value("featureSmallTitle")</h5>
+        <h3 class="features-title">
+          @Model.Value("featureMainTitle")
+        </h3>
+        <button class="theme-btn">
+          @Model.Value("featureButton")<i class="fa-light fa-arrow-up-right"></i>
+        </button>
+      </div>
+      <div class="features-categories">
+        <div class="features-cube">
+          <div><i class="fa-regular fa-handshake"></i></div>
+          <h4>@Model.Value("boxOneTitle")</h4>
+          <p>@Model.Value("boxOneContent")</p>
+        </div>
+        <div class="features-cube">
+          <div><i class="fa-regular fa-lightbulb-on"></i></div>
+          <h4>@Model.Value("boxTwoTitle")</h4>
+          <p>@Model.Value("boxTwoContent")</p>
+        </div>
+        <div class="features-cube">
+          <div><i class="fa-regular fa-chart-column"></i></div>
+          <h4>@Model.Value("boxThreeTitle")</h4>
+          <p>@Model.Value("boxThreeContent")</p>
+        </div>
+        <div class="features-cube">
+          <div><i class="fa-regular fa-cube"></i></div>
+          <h4>@Model.Value("boxFourTitle")</h4>
+          <p>@Model.Value("boxFourContent")</p>
+        </div>
+      </div>
+    </div>
+  </section>

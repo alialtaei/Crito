@@ -1,0 +1,36 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models
+
+<section class="background-showcase">
+    <div class="container">
+      <div class="showcase-info">
+        <h1 class="showcase-title">@Model.Value("heroTitle")</h1>
+        <h6 class="showcase-text">@Model.Value("heroText")</h6>
+        <div class="showcase-buttons">
+          <button class="theme-btn">@Model.Value("primaryButton")<i class="fa-light fa-arrow-up-right"></i>
+          </button>
+          <button class="beige-theme-btn">@Model.Value("secondaryButton")<i class="fa-light fa-arrow-up-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="showcase-image">
+        @{
+        var heroImage = Model.Value<MediaWithCrops>("heroImage"); 
+        if(heroImage != null)
+        {
+        <img src="@heroImage.MediaUrl()" alt="#"/>
+        }
+        }
+      </div>
+    </div>
+    <div class="background-lines">
+        @{
+        var heroEffect = Model.Value<MediaWithCrops>("heroEffect"); 
+        if(heroEffect != null)
+        {
+        <img src="@heroEffect.MediaUrl()" alt="effect"/>
+        }
+        }
+        
+    </div>
+  </section>
